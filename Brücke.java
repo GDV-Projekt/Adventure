@@ -20,7 +20,9 @@ public class Brücke {
 		glPopMatrix();
 		glPushMatrix();
 			glTranslatef(15.6f,0,0);
+			glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
 			brückenbogen.drawBrückenbogen();
+			glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_FALSE) ;
 		glPopMatrix();
 	}
 	public void drawSeitenteil() {

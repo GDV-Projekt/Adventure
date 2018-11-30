@@ -1,29 +1,14 @@
-package Taschenlampe;
+package Gegnerfigur;
+import static org.lwjgl.opengl.GL11.*;
 
-import static org.lwjgl.opengl.GL11.GL_AMBIENT;
-import static org.lwjgl.opengl.GL11.GL_DIFFUSE;
-import static org.lwjgl.opengl.GL11.GL_FILL;
-import static org.lwjgl.opengl.GL11.GL_FRONT;
-import static org.lwjgl.opengl.GL11.GL_POLYGON;
-import static org.lwjgl.opengl.GL11.GL_SHININESS;
-import static org.lwjgl.opengl.GL11.GL_SPECULAR;
-import static org.lwjgl.opengl.GL11.glBegin;
-import static org.lwjgl.opengl.GL11.glEnd;
-import static org.lwjgl.opengl.GL11.glMaterialf;
-import static org.lwjgl.opengl.GL11.glMaterialfv;
-import static org.lwjgl.opengl.GL11.glNormal3f;
-import static org.lwjgl.opengl.GL11.glPolygonMode;
-import static org.lwjgl.opengl.GL11.glVertex3f;
-
-public class Facette {
-
+public class FacetteGegner {
 
 	float [] mat_amb = new float[4];
 	float [] mat_dif = new float[4];
 	float [] mat_spec = new float[4];
 	private float shini = (float) 5;
 	
-	public Facette(float[]mat_amb,float[]mat_dif,float[]mat_spec, float shini) {
+	public FacetteGegner(float[]mat_amb,float[]mat_dif,float[]mat_spec, float shini) {
 		
 		for(int i=0;i < this.mat_amb.length;i++) {
 			this.mat_amb[i] = mat_amb[i];
@@ -57,6 +42,4 @@ public class Facette {
 	
 
 	
-
-
 }

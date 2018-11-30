@@ -4,24 +4,24 @@ public class Wasser {
 	
 	Welle1 welle1 = new Welle1();
 	Welle2 welle2 = new Welle2();
-	Umgebung umgebung = new Umgebung();
+	WasserSchale wasserschale = new WasserSchale();
 	
 	public void drawWasser() {
-		//Test-Umgebung
+		//Schale worin Wasser "liegt"
 		
-//		glPushMatrix();
-//			glTranslatef(0,12,0);
-//			umgebung.drawUmgebung();
-//		glPopMatrix();
-
-		//Wasser
 		glPushMatrix();
-			glTranslatef(0,0,-42);
+			glTranslatef(0,0,0);
+			wasserschale.drawUmgebung();
+		glPopMatrix();
+
+//		Wasser
+		glPushMatrix();
+			glTranslatef(0,-2,-42);
 			welle1.drawWelle();
 		glPopMatrix();
 		glPushMatrix();
 			glRotatef(90,0,1,0);
-			glTranslatef(0,0,-42);
+			glTranslatef(0,-2,-42);
 			welle2.drawWelle();
 		glPopMatrix();
 	

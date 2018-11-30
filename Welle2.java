@@ -38,7 +38,7 @@ public class Welle2 {
 	}
 	public float y(float u, float v) {
 		setCount();
-			return (float)Math.sin(count+u);
+			return 0.39f*(float)Math.sin(count+u);
 	}
 	public float z(float u, float v) 
 	{
@@ -50,7 +50,7 @@ public class Welle2 {
 		
 		for(int i=0;i<m;i++) {
 			for(int j=0; j<n;j++) {
-//				glColor3f(rot,gruen,blau);
+
 				Normalvektor(ul + i*du,vl +j*dv);
 				glBegin(GL_TRIANGLE_FAN );
 				glMaterialfv(GL_FRONT,GL_AMBIENT, mat_amb);
